@@ -1,0 +1,1215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Alivio Lending — financial assistance for personal and business needs. Apply online and learn about our application process.">
+<title>Alivio Lending | Your Goals, Our Support</title>
+
+<style>
+:root {
+    --navy: #092b4c;
+    --blue: #104b7a;
+    --gold: #f4c542;
+    --gold-light: #fff5ce;
+    --green: #17845d;
+    --white: #ffffff;
+    --light: #f4f7fb;
+    --text: #203248;
+    --muted: #63748a;
+    --border: #e0e7ef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: min(1150px, 91%);
+    margin: auto;
+}
+
+section {
+    padding: 80px 0;
+    scroll-margin-top: 90px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-heading .eyebrow {
+    color: var(--green);
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: .78rem;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    line-height: 1.2;
+    margin: 9px 0 12px;
+}
+
+.section-heading p {
+    max-width: 680px;
+    margin: auto;
+    color: var(--muted);
+}
+
+/* NAVIGATION */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.97);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 3px 15px rgba(9,43,76,.06);
+}
+
+nav {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--navy);
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.brand img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.brand small {
+    display: block;
+    font-size: .65rem;
+    letter-spacing: 4px;
+    color: var(--green);
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 19px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    font-size: .87rem;
+    font-weight: 700;
+    transition: color .2s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 8px;
+    font-weight: 800;
+    text-align: center;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(9,43,76,.15);
+}
+
+.btn-gold {
+    color: var(--navy);
+    background: var(--gold);
+}
+
+.btn-navy {
+    color: var(--white);
+    background: var(--navy);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.6);
+    color: var(--white);
+}
+
+/* HERO */
+#home {
+    padding: 78px 0 90px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(244,197,66,.2), transparent 28%),
+        linear-gradient(130deg, #082b4c, #104b7a);
+    color: var(--white);
+    overflow: hidden;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero .eyebrow {
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-size: .82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(2.7rem, 6vw, 4.7rem);
+    line-height: 1.08;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #d9e5f0;
+    max-width: 610px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.hero-card {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 24px;
+    padding: 35px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.hero-logo {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    background: white;
+    padding: 12px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-card h3 {
+    color: var(--gold);
+    font-size: 1.6rem;
+    margin-bottom: 7px;
+}
+
+.hero-card p {
+    margin: 0;
+}
+
+.trust-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.trust-points span {
+    padding: 7px 12px;
+    border-radius: 30px;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.14);
+    font-size: .83rem;
+}
+
+/* QUICK BENEFITS */
+.benefits {
+    margin-top: -30px;
+    position: relative;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(9,43,76,.08);
+    overflow: hidden;
+}
+
+.benefit {
+    padding: 24px 15px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+}
+
+.benefit:last-child {
+    border-right: none;
+}
+
+.benefit .icon {
+    font-size: 1.7rem;
+    margin-bottom: 6px;
+}
+
+.benefit h3 {
+    color: var(--navy);
+    font-size: 1rem;
+}
+
+.benefit p {
+    color: var(--muted);
+    font-size: .85rem;
+}
+
+/* ABOUT */
+#about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.about-copy p {
+    color: var(--muted);
+    margin-bottom: 17px;
+}
+
+.values-card {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.values-card h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.value-item {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.value-item .check {
+    color: var(--green);
+    font-weight: 900;
+}
+
+.value-item p {
+    color: var(--muted);
+    font-size: .94rem;
+}
+
+/* LOAN PURPOSES */
+.purpose-grid,
+.service-grid,
+.marketing-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 27px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: 0 12px 26px rgba(9,43,76,.08);
+}
+
+.card-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: var(--gold-light);
+    font-size: 1.55rem;
+    margin-bottom: 17px;
+}
+
+.card h3 {
+    color: var(--navy);
+    margin-bottom: 8px;
+    font-size: 1.12rem;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: .94rem;
+}
+
+/* APPLICATION PROCESS */
+#process {
+    background: white;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.step {
+    text-align: center;
+    padding: 25px 18px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.step-number {
+    display: grid;
+    place-items: center;
+    margin: 0 auto 16px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.step h3 {
+    color: var(--navy);
+    font-size: 1.02rem;
+    margin-bottom: 8px;
+}
+
+.step p {
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.processing-note {
+    text-align: center;
+    margin-top: 28px;
+    background: var(--gold-light);
+    border: 1px solid #f1dfa0;
+    padding: 24px;
+    border-radius: 14px;
+}
+
+.processing-note h3 {
+    color: var(--navy);
+    font-size: 1.5rem;
+}
+
+.processing-note h3 span {
+    color: var(--green);
+}
+
+.processing-note p {
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+/* MARKETING */
+.marketing-grid .card {
+    border-top: 4px solid var(--green);
+}
+
+.marketing-note {
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 12px;
+    background: #e9f6f0;
+    color: #245743;
+}
+
+/* APPLY CTA */
+.apply-banner {
+    background: linear-gradient(125deg, #0a2c4d, #12634e);
+    border-radius: 22px;
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 25px;
+    align-items: center;
+    color: white;
+}
+
+.apply-banner h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 12px;
+}
+
+.apply-banner p {
+    color: #d8e8ed;
+    max-width: 650px;
+}
+
+.apply-banner .btn {
+    white-space: nowrap;
+}
+
+.apply-banner .small-note {
+    font-size: .82rem;
+    margin-top: 12px;
+}
+
+/* FAQ */
+.faq-list {
+    display: grid;
+    gap: 13px;
+    max-width: 850px;
+    margin: auto;
+}
+
+details {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+}
+
+summary {
+    color: var(--navy);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+details p {
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+/* CONTACT */
+#contact {
+    background: var(--navy);
+    color: white;
+}
+
+#contact .section-heading h2 {
+    color: white;
+}
+
+#contact .section-heading p {
+    color: #c7d5e4;
+}
+
+#contact .section-heading .eyebrow {
+    color: var(--gold);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.contact-card {
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(255,255,255,.07);
+    border-radius: 13px;
+}
+
+.contact-card h3 {
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.contact-card p,
+.contact-card a {
+    color: white;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.contact-cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* FOOTER */
+footer {
+    padding: 27px 0;
+    background: #061d33;
+    color: #bdccdc;
+    text-align: center;
+    font-size: .9rem;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+footer p + p {
+    margin-top: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px 17px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons,
+    .trust-points {
+        justify-content: center;
+    }
+
+    .hero-card {
+        max-width: 500px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .apply-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .benefit-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .benefit:nth-child(2) {
+        border-right: none;
+    }
+
+    .benefit:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .purpose-grid,
+    .service-grid,
+    .marketing-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        padding: 25px;
+    }
+
+    .apply-banner {
+        padding: 28px 22px;
+    }
+
+    .nav-links {
+        gap: 10px 13px;
+    }
+
+    .nav-links a {
+        font-size: .82rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav class="container">
+        <a class="brand" href="#home" aria-label="Alivio Lending home">
+            <!-- Logo image location: Photo/Logo.png -->
+            <img src="Photo/Logo.png" alt="Alivio Lending logo"
+                 onerror="this.style.display='none'">
+            <span>
+                ALIVIO
+                <small>LENDING</small>
+            </span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#loans">Loan Purposes</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#marketing">Why Alivio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="home">
+    <div class="container hero">
+        <div class="hero-content">
+            <span class="eyebrow">Your Goals. Our Support.</span>
+            <h1>Move Forward With <span>Alivio Lending</span></h1>
+            <h2>Financial support for your personal and business goals.</h2>
+
+            <p>
+                Looking for financial assistance? Start your application
+                online with Alivio Lending. Share your details through our
+                application form and our team can guide you through the
+                next steps.
+            </p>
+
+            <div class="hero-buttons">
+                <a class="btn btn-gold"
+                   href="https://forms.gle/e9XgtE9FUzCVZSwS9"
+                   target="_blank" rel="noopener noreferrer">
+                    Apply Online →
+                </a>
+                <a class="btn btn-outline" href="#process">
+                    Learn How It Works
+                </a>
+            </div>
+
+            <div class="trust-points">
+                <span>✓ Clear Communication</span>
+                <span>✓ Application Assistance</span>
+                <span>✓ 24–72 Hour Processing Target</span>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <!-- The same logo appears in the hero section -->
+            <img src="Photo/Logo.png" alt="Alivio Lending"
+                 class="hero-logo" onerror="this.style.display='none'">
+            <h3>Your Goals Matter</h3>
+            <p>
+                Take the first step toward your financial plans.
+                Complete the application form to get started.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<div class="container benefits">
+    <div class="benefit-grid">
+        <div class="benefit">
+            <div class="icon">⏱️</div>
+            <h3>Timely Processing</h3>
+            <p>Target of 24–72 hours</p>
+        </div>
+        <div class="benefit">
+            <div class="icon">📝</div>
+            <h3>Online Application</h3>
+            <p>Start through our form</p>
+        </div>
+        <div class="benefit">
+            <div class="icon">🤝</div>
+            <h3>Personal Assistance</h3>
+            <p>Help with next steps</p>
+        </div>
+        <div class="benefit">
+            <div class="icon">🔎</div>
+            <h3>Clear Process</h3>
+            <p>Assessment and verification</p>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">About Alivio</span>
+            <h2>Financial Support With a Personal Touch</h2>
+            <p>
+                Our goal is to make the first step toward a lending inquiry
+                simple, clear, and accessible.
+            </p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-copy">
+                <p>
+                    At Alivio Lending, we understand that people may seek
+                    financial assistance for different reasons, from
+                    household expenses to business plans and other important
+                    needs.
+                </p>
+                <p>
+                    Our website helps interested applicants submit their
+                    information online and understand the general application
+                    process. Each application is subject to the lender's
+                    eligibility requirements, verification, and assessment.
+                </p>
+                <p>
+                    We aim to communicate clearly throughout the process,
+                    explain applicable terms before any agreement, and treat
+                    applicant information responsibly.
+                </p>
+            </div>
+
+            <div class="values-card">
+                <h3>What You Can Expect</h3>
+                <div class="value-item">
+                    <span class="check">✓</span>
+                    <p><strong>Simple first step</strong><br>Submit your inquiry through the online form.</p>
+                </div>
+                <div class="value-item">
+                    <span class="check">✓</span>
+                    <p><strong>Clear communication</strong><br>Receive updates or requests for additional information.</p>
+                </div>
+                <div class="value-item">
+                    <span class="check">✓</span>
+                    <p><strong>Responsible assessment</strong><br>Eligibility and terms are reviewed before a lending decision.</p>
+                </div>
+                <div class="value-item">
+                    <span class="check">✓</span>
+                    <p><strong>Respect for privacy</strong><br>Handle personal information according to applicable privacy requirements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LOAN PURPOSES -->
+<section id="loans">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Explore Your Options</span>
+            <h2>What Do You Need Financial Support For?</h2>
+            <p>
+                Tell us about your needs in the application form.
+                Available loan products and eligibility depend on the
+                lender's actual offerings and assessment.
+            </p>
+        </div>
+
+        <div class="purpose-grid">
+            <article class="card">
+                <div class="card-icon">🏠</div>
+                <h3>Personal Expenses</h3>
+                <p>For eligible applicants seeking help with planned personal or household expenses.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">🏪</div>
+                <h3>Business Needs</h3>
+                <p>For business-related financial inquiries, subject to available products and qualification.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">🎓</div>
+                <h3>Education &amp; Family</h3>
+                <p>Discuss financial needs related to education, family priorities, or other planned expenses.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- APPLICATION PROCESS -->
+<section id="process">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Start Here</span>
+            <h2>How the Application Process Works</h2>
+            <p>
+                Follow these general steps to submit an inquiry and
+                understand what happens next.
+            </p>
+        </div>
+
+        <div class="steps">
+            <article class="step">
+                <div class="step-number">1</div>
+                <h3>Fill Out the Form</h3>
+                <p>Open our application form and provide the requested information accurately.</p>
+            </article>
+            <article class="step">
+                <div class="step-number">2</div>
+                <h3>Application Review</h3>
+                <p>The lending team reviews the submission and may request additional details.</p>
+            </article>
+            <article class="step">
+                <div class="step-number">3</div>
+                <h3>Verification &amp; Decision</h3>
+                <p>Eligibility and required information are assessed before a lending decision.</p>
+            </article>
+            <article class="step">
+                <div class="step-number">4</div>
+                <h3>Review the Terms</h3>
+                <p>If approved, carefully review the loan amount, fees, interest, repayment schedule, and agreement.</p>
+            </article>
+        </div>
+
+        <div class="processing-note">
+            <h3>Processing Time: <span>24–72 Hours</span></h3>
+            <p>
+                This is the target processing window after a complete
+                application is received. Actual timing may vary due to
+                verification, additional requirements, business days,
+                or other circumstances. Submission does not guarantee approval.
+            </p>
+        </div>
+    </div>
+</section>2
+
+<!-- WHY ALIVIO -->
+<section id="marketing">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Why Connect With Us?</span>
+            <h2>A Clearer Way to Get Started</h2>
+            <p>
+                We want prospective applicants to understand the process
+                and make informed decisions about their financial needs.
+            </p>
+        </div>
+
+        <div class="service-grid">
+            <article class="card">
+                <div class="card-icon">📱</div>
+                <h3>Convenient Online Inquiry</h3>
+                <p>Start by completing the application form from your phone or computer.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">💬</div>
+                <h3>Helpful Communication</h3>
+                <p>Contact us with questions about the application process and next steps.</p>
+            </article>
+            <article class="card">
+                <div class="card-icon">📋</div>
+                <h3>Understand the Terms</h3>
+                <p>Review all applicable charges, interest, due dates, and repayment obligations before accepting an offer.</p>
+            </article>
+        </div>
+
+        <div class="marketing-note">
+            <strong>Our commitment:</strong>
+            We aim to provide a straightforward application experience.
+            Eligibility, available products, costs, and final decisions
+            must be confirmed by the authorized lending provider.
+        </div>
+    </div>
+</section>
+
+<!-- MARKETING STRATEGY -->
+<section id="strategy" style="background:white;">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Growing With Our Community</span>
+            <h2>How We Help More People Discover Alivio</h2>
+            <p>
+                Our marketing approach focuses on building trust,
+                reaching relevant audiences, and making it easy to
+                ask questions or apply.
+            </p>
+        </div>
+
+        <div class="marketing-grid">
+            <article class="card">
+                <div class="card-icon">📣</div>
+                <h3>Social Media Awareness</h3>
+                <p>
+                    Share educational posts on Facebook and other relevant
+                    channels explaining the application steps, required
+                    documents, and responsible borrowing.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Reach Relevant Audiences</h3>
+                <p>
+                    Use clear, compliant ads aimed at adults who are
+                    researching financial options. Avoid guaranteed
+                    approval claims or pressure-based messaging.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">⭐</div>
+                <h3>Build Trust &amp; Referrals</h3>
+                <p>
+                    Offer prompt, respectful customer service. Invite
+                    voluntary feedback and referrals without promising
+                    outcomes or rewarding misleading testimonials.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">📲</div>
+                <h3>One Clear Call to Action</h3>
+                <p>
+                    Direct visitors to the same verified application
+                    form, phone number, and email address across
+                    social posts and promotional materials.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">📚</div>
+                <h3>Helpful Financial Content</h3>
+                <p>
+                    Publish practical guidance on budgeting, repayment
+                    planning, understanding interest, and comparing
+                    lending terms.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">📊</div>
+                <h3>Measure What Works</h3>
+                <p>
+                    Track form visits, completed applications, response
+                    times, and qualified inquiries. Improve campaigns
+                    based on genuine results.
+                </p>
+            </article>
+        </div>
+
+        <div class="marketing-note">
+            <strong>Suggested weekly routine:</strong>
+            Publish two helpful educational posts, one application-process
+            explainer, and one invitation to contact Alivio. Respond to
+            inquiries promptly, follow up only with appropriate permission,
+            and monitor which channels generate genuine interest.
+        </div>
+    </div>
+</section>
+
+<!-- APPLICATION CALL TO ACTION -->
+<section id="apply">
+    <div class="container">
+        <div class="apply-banner">
+            <div>
+                <h2>Ready to Take the First Step?</h2>
+                <p>
+                    Complete the online application form to share your
+                    inquiry with Alivio Lending. Please provide accurate
+                    details and review any requested information carefully.
+                </p>
+                <p class="small-note">
+                    Applications are subject to eligibility, verification,
+                    applicable terms, and the lender's decision.
+                </p>
+            </div>
+
+            <a class="btn btn-gold"
+               href="https://forms.gle/e9XgtE9FUzCVZSwS9"
+               target="_blank" rel="noopener noreferrer">
+                Fill Out the Form →
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Frequently Asked Questions</span>
+            <h2>Before You Apply</h2>
+        </div>
+
+        <div class="faq-list">
+            <details>
+                <summary>How do I submit an application?</summary>
+                <p>
+                    Click any Apply Online or Fill Out the Form button
+                    to open the Alivio Lending application form.
+                </p>
+            </details>
+
+            <details>
+                <summary>How long does processing take?</summary>
+                <p>
+                    The target processing time is 24–72 hours after a
+                    complete application is received. Verification or
+                    other requirements may affect the actual timeframe.
+                </p>
+            </details>
+
+            <details>
+                <summary>Does submitting the form guarantee approval?</summary>
+                <p>
+                    No. Every application is subject to eligibility
+                    requirements, verification, and the lender's decision.
+                </p>
+            </details>
+
+            <details>
+                <summary>What should I check before accepting a loan?</summary>
+                <p>
+                    Review the amount you will receive, interest rate,
+                    all fees, total repayment amount, due dates, late
+                    payment consequences, and the full agreement.
+                </p>
+            </details>
+
+            <details>
+                <summary>How can I contact Alivio Lending?</summary>
+                <p>
+                    You can email Aliviolending@gmail.com or call
+                    09126995021 for inquiries.
+                </p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Let's Connect</span>
+            <h2>Contact Alivio Lending</h2>
+            <p>
+                Have a question about the application process?
+                Reach out using the contact details below.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>📞 Phone</h3>
+                <p>
+                    <a href="tel:09126995021">09126995021</a>
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <h3>✉️ Email</h3>
+                <p>
+                    <a href="mailto:Aliviolending@gmail.com">
+                        Aliviolending@gmail.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <h3>📝 Application Form</h3>
+                <p>
+                    <a href="https://forms.gle/e9XgtE9FUzCVZSwS9"
+                       target="_blank" rel="noopener noreferrer">
+                        Open the online form
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="contact-cta">
+            <a class="btn btn-gold"
+               href="https://forms.gle/e9XgtE9FUzCVZSwS9"
+               target="_blank" rel="noopener noreferrer">
+                Apply with Alivio →
+            </a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p><strong>ALIVIO LENDING</strong> — Your Goals. Our Support.</p>
+        <p>Fast communication. Clear information. Responsible lending.</p>
+        <p>&copy; <span id="year"></span> Alivio Lending. All rights reserved.</p>
+        <p style="font-size:.78rem; margin-top:10px;">
+            All applications are subject to eligibility and assessment.
+            Confirm the lender's applicable terms and authorization before applying.
+        </p>
+    </div>
+</footer>
+
+<script>
+    // Automatically update the copyright year.
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
